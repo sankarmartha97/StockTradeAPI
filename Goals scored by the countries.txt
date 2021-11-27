@@ -1,0 +1,3 @@
+select countries.id,countries.name, sum(goals) as goals from countries 
+inner join goals on countries.id=goals.country_id  group by countries.id,countries.name 
+order by goals desc, countries.id asc
